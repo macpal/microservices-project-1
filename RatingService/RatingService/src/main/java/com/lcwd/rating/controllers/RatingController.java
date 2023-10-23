@@ -21,7 +21,7 @@ public class RatingController {
     public ResponseEntity<Rating> create(@RequestBody Rating rating) {
 //        String ratingId = UUID.randomUUID().toString();
 //        rating.setRatingId(ratingId);
-        return ResponseEntity.status(HttpStatus.CREATED).body(rating);
+        return ResponseEntity.status(HttpStatus.CREATED).body(ratingService.createRating(rating));
     }
 
     //get all
